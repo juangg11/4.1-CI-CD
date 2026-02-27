@@ -4,30 +4,6 @@ Práctica de introducción a **CI/CD** (Integración Continua y Entrega/Desplieg
 
 ---
 
-## Tabla de contenidos
-
-- [Descripción del proyecto](#descripción-del-proyecto)
-- [Estructura del proyecto](#estructura-del-proyecto)
-- [Cómo ejecutar localmente](#cómo-ejecutar-localmente)
-- [Tests unitarios](#tests-unitarios)
-- [Pipeline CI/CD](#pipeline-cicd)
-  - [CI – Integración Continua](#ci--integración-continua)
-  - [CD – Entrega Continua a Docker Hub](#cd--entrega-continua-a-docker-hub)
-  - [CD – Despliegue Continuo en AWS](#cd--despliegue-continuo-en-aws)
-- [Secrets necesarios en GitHub](#secrets-necesarios-en-github)
-
----
-
-## Descripción del proyecto
-
-Esta práctica implementa un pipeline de CI/CD completo para una aplicación Flask mínima que devuelve `Hello, World!`. El objetivo es automatizar todo el ciclo de vida del software:
-
-1. **CI**: Ejecutar tests automáticamente ante cada `push` a `main`.
-2. **CD (Docker Hub)**: Construir y publicar la imagen Docker si los tests pasan.
-3. **CD (AWS)**: Desplegar la imagen en **AWS App Runner** usando **Amazon ECR**.
-
----
-
 ## Estructura del proyecto
 
 ```
@@ -73,8 +49,6 @@ pip install -r requirements.txt
 ```bash
 python src/app.py
 ```
-
-La app estará disponible en `http://localhost:8000`
 
 ### 4. Desactivar el entorno virtual
 
@@ -220,4 +194,4 @@ EXPOSE 8000
 CMD ["python", "app.py"]
 ```
 
-![alt text](image.png)
+<img width="1900" height="914" alt="image" src="https://github.com/user-attachments/assets/e893828f-1df4-4c23-a80c-44fc2acb5878" />
